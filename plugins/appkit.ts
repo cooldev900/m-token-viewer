@@ -1,4 +1,3 @@
-import { defineNuxtPlugin } from "#app";
 import { createAppKit } from "@reown/appkit/vue";
 import { mainnet, sepolia, type AppKitNetwork } from "@reown/appkit/networks";
 import { WagmiAdapter } from "@reown/appkit-adapter-wagmi";
