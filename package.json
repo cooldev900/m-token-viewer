@@ -10,8 +10,13 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@reown/appkit": "^1.5.3",
+    "@reown/appkit-adapter-wagmi": "^1.5.3",
+    "@tanstack/react-query": "^5.62.0",
     "nuxt": "^3.14.1592",
+    "viem": "^2.21.53",
     "vue": "latest",
-    "vue-router": "latest"
+    "vue-router": "latest",
+    "wagmi": "^2.13.2"
   }
 }
