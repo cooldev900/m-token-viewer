@@ -12,11 +12,19 @@
   "dependencies": {
     "@reown/appkit": "^1.5.3",
     "@reown/appkit-adapter-wagmi": "^1.5.3",
-    "@tanstack/react-query": "^5.62.0",
+    "@tanstack/vue-query": "^5.62.0",
+    "@wagmi/vue": "^0.0.67",
     "nuxt": "^3.14.1592",
+    "use-wagmi": "^1.5.0",
     "viem": "^2.21.53",
     "vue": "latest",
     "vue-router": "latest",
     "wagmi": "^2.13.2"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "unplugin-auto-import": "^0.18.6",
+    "unplugin-vue-components": "^0.27.5",
+    "vite-plugin-node-polyfills": "^0.22.0"
   }
 }
