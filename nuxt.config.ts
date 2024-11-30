@@ -9,6 +9,18 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       VITE_APP_PROJECT_ID: process.env.VITE_APP_PROJECT_ID,
+      networks: [
+        {
+          chainId: 1,
+          name: "Mainnet",
+          mTokenAddress: "0x866a2bf4e572cbcf37d5071a7a58503bfb36be1b"
+        },
+        {
+          chainId: 11155111,
+          name: "Sepolia",
+          mTokenAddress: "0x866a2bf4e572cbcf37d5071a7a58503bfb36be1b"
+        },
+      ]
     },
   },
   compatibilityDate: '2024-11-01',
@@ -55,7 +67,7 @@ export default defineNuxtConfig({
       }),
     ],
   },
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', '@hebilicious/vue-query-nuxt'],
   css: ['@/assets/css/global.css'],
   ssr: false,
 })
