@@ -1,6 +1,7 @@
 <template>
     <div class="w-full h-full flex flex-col">
-      <m-token-board v-if="isConnected"/>
+      <my-board/>
+      <m-token-board/>
       <wallet-connect/>
     </div>
   </template>

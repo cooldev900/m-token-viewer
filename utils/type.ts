@@ -10,4 +10,10 @@ export interface INetwork {
 export interface IHolder {
     id: string;
     balance: string;
-  }
+}
+
+export interface IBalanceHistory {
+    timestamp: string;
+    id: string;
+    balance: string;
+}

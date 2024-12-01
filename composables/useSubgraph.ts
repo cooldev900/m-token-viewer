@@ -1,15 +1,19 @@
 import { useUseBackenURL } from "./useBackenURL";
 
 const query = `
-query FetchHoldersQuery {
-  holders(where: { id_not: "0x0000000000000000000000000000000000000000" }) {
-    id
-    balance
+  query GetMTokenData {
+    token(id: "1") {
+      id
+      volume
+    }
+    holders(where: { id_not: "0x0000000000000000000000000000000000000000" }) {
+      id
+      balance
+    }
   }
-}
 `
 
-export const useHolders = () => {
+export const useSubgraph = () => {
   const apiUrl = useUseBackenURL();
 
   const { data, isLoading, error, refetch }  =useQuery({
@@ -23,7 +27,8 @@ export const useHolders = () => {
         throw new Error('Failed to fetch holders data.')
       }
       return response.json();
-    }
+    },
+    staleTime: 0,
   })
 
   return { data, isLoading, error, refetch };
