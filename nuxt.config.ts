@@ -9,6 +9,20 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       VITE_APP_PROJECT_ID: process.env.VITE_APP_PROJECT_ID,
+      networks: [
+        {
+          chainId: '1',
+          name: "Mainnet",
+          mTokenAddress: "0x866a2bf4e572cbcf37d5071a7a58503bfb36be1b",
+          apiUrl: 'https://subgraph.satsuma-prod.com/be297ae35dd7/jeremys-team--377934/m-token-subgraph/version/v0.0.1-new-version/api',
+        },
+        {
+          chainId: '11155111',
+          name: "Sepolia",
+          mTokenAddress: "0x866a2bf4e572cbcf37d5071a7a58503bfb36be1b",
+          apiUrl: 'https://subgraph.satsuma-prod.com/be297ae35dd7/jeremys-team--377934/m-token-subgraph/version/v0.0.1-new-version/api',
+        },
+      ]
     },
   },
   compatibilityDate: '2024-11-01',
@@ -55,7 +69,18 @@ export default defineNuxtConfig({
       }),
     ],
   },
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', '@hebilicious/vue-query-nuxt', 'shadcn-nuxt'],
   css: ['@/assets/css/global.css'],
   ssr: false,
+  shadcn: {
+    /**
+     * Prefix for all the imported component
+     */
+    prefix: '',
+    /**
+     * Directory that the component lives in.
+     * @default "./components/ui"
+     */
+    componentDir: './components/ui'
+  }
 })

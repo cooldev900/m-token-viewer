@@ -13,6 +13,8 @@ declare global {
   const defineAsyncComponent: typeof import('vue')['defineAsyncComponent']
   const defineComponent: typeof import('vue')['defineComponent']
   const effectScope: typeof import('vue')['effectScope']
+  const fetchBalanceHistory: typeof import('./composables/useBalanceHistory')['fetchBalanceHistory']
+  const getBalanceHistory: typeof import('./composables/useBalanceHistory')['getBalanceHistory']
   const getCurrentInstance: typeof import('vue')['getCurrentInstance']
   const getCurrentScope: typeof import('vue')['getCurrentScope']
   const h: typeof import('vue')['h']
@@ -54,15 +56,25 @@ declare global {
   const triggerRef: typeof import('vue')['triggerRef']
   const unref: typeof import('vue')['unref']
   const useAttrs: typeof import('vue')['useAttrs']
+  const useBalanceHistory: typeof import('./composables/useBalanceHistory')['useBalanceHistory']
+  const useBalanceHistoryMutation: typeof import('./composables/useBalanceHistory')['useBalanceHistoryMutation']
   const useCssModule: typeof import('vue')['useCssModule']
   const useCssVars: typeof import('vue')['useCssVars']
+  const useHolders: typeof import('./composables/useHolders')['useHolders']
   const useId: typeof import('vue')['useId']
   const useLink: typeof import('vue-router')['useLink']
+  const useMTokenBalance: typeof import('./composables/useMTokenBalance')['useMTokenBalance']
   const useModel: typeof import('vue')['useModel']
   const useRoute: typeof import('vue-router')['useRoute']
   const useRouter: typeof import('vue-router')['useRouter']
   const useSlots: typeof import('vue')['useSlots']
+  const useSubgraph: typeof import('./composables/useSubgraph')['useSubgraph']
   const useTemplateRef: typeof import('vue')['useTemplateRef']
+  const useTokenBalance: typeof import('./composables/useMTokenBalance')['useTokenBalance']
+  const useUseBackenURL: typeof import('./composables/useBackenURL')['useUseBackenURL']
+  const useUseBalanceHistory: typeof import('./composables/useBalanceHistory')['useUseBalanceHistory']
+  const useUseMTokenBalance: typeof import('./composables/useMTokenBalance')['useUseMTokenBalance']
+  const useVolumes: typeof import('./composables/useVolume')['useVolumes']
   const watch: typeof import('vue')['watch']
   const watchEffect: typeof import('vue')['watchEffect']
   const watchPostEffect: typeof import('vue')['watchPostEffect']
@@ -87,6 +99,7 @@ declare module 'vue' {
     readonly defineAsyncComponent: UnwrapRef<typeof import('vue')['defineAsyncComponent']>
     readonly defineComponent: UnwrapRef<typeof import('vue')['defineComponent']>
     readonly effectScope: UnwrapRef<typeof import('vue')['effectScope']>
+    readonly fetchBalanceHistory: UnwrapRef<typeof import('./composables/useBalanceHistory')['fetchBalanceHistory']>
     readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
     readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
     readonly h: UnwrapRef<typeof import('vue')['h']>
@@ -132,11 +145,15 @@ declare module 'vue' {
     readonly useCssVars: UnwrapRef<typeof import('vue')['useCssVars']>
     readonly useId: UnwrapRef<typeof import('vue')['useId']>
     readonly useLink: UnwrapRef<typeof import('vue-router')['useLink']>
+    readonly useMTokenBalance: UnwrapRef<typeof import('./composables/useMTokenBalance')['useMTokenBalance']>
     readonly useModel: UnwrapRef<typeof import('vue')['useModel']>
     readonly useRoute: UnwrapRef<typeof import('vue-router')['useRoute']>
     readonly useRouter: UnwrapRef<typeof import('vue-router')['useRouter']>
     readonly useSlots: UnwrapRef<typeof import('vue')['useSlots']>
+    readonly useSubgraph: UnwrapRef<typeof import('./composables/useSubgraph')['useSubgraph']>
     readonly useTemplateRef: UnwrapRef<typeof import('vue')['useTemplateRef']>
+    readonly useUseBackenURL: UnwrapRef<typeof import('./composables/useBackenURL')['useUseBackenURL']>
+    readonly useVolumes: UnwrapRef<typeof import('./composables/useVolume')['useVolumes']>
     readonly watch: UnwrapRef<typeof import('vue')['watch']>
     readonly watchEffect: UnwrapRef<typeof import('vue')['watchEffect']>
     readonly watchPostEffect: UnwrapRef<typeof import('vue')['watchPostEffect']>
