@@ -63,12 +63,14 @@ declare global {
   const useHolders: typeof import('./composables/useHolders')['useHolders']
   const useId: typeof import('vue')['useId']
   const useLink: typeof import('vue-router')['useLink']
+  const useMTokenBalance: typeof import('./composables/useMTokenBalance')['useMTokenBalance']
   const useModel: typeof import('vue')['useModel']
   const useRoute: typeof import('vue-router')['useRoute']
   const useRouter: typeof import('vue-router')['useRouter']
   const useSlots: typeof import('vue')['useSlots']
   const useSubgraph: typeof import('./composables/useSubgraph')['useSubgraph']
   const useTemplateRef: typeof import('vue')['useTemplateRef']
+  const useTokenBalance: typeof import('./composables/useMTokenBalance')['useTokenBalance']
   const useUseBackenURL: typeof import('./composables/useBackenURL')['useUseBackenURL']
   const useUseBalanceHistory: typeof import('./composables/useBalanceHistory')['useUseBalanceHistory']
   const useUseMTokenBalance: typeof import('./composables/useMTokenBalance')['useUseMTokenBalance']
@@ -143,6 +145,7 @@ declare module 'vue' {
     readonly useCssVars: UnwrapRef<typeof import('vue')['useCssVars']>
     readonly useId: UnwrapRef<typeof import('vue')['useId']>
     readonly useLink: UnwrapRef<typeof import('vue-router')['useLink']>
+    readonly useMTokenBalance: UnwrapRef<typeof import('./composables/useMTokenBalance')['useMTokenBalance']>
     readonly useModel: UnwrapRef<typeof import('vue')['useModel']>
     readonly useRoute: UnwrapRef<typeof import('vue-router')['useRoute']>
     readonly useRouter: UnwrapRef<typeof import('vue-router')['useRouter']>

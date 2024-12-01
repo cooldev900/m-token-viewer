@@ -1,8 +1,8 @@
 <template>
     <div class="w-full h-full flex flex-col">
-      <my-board/>
-      <m-token-board/>
       <wallet-connect/>
+      <my-board v-if="isConnected"/>
+      <m-token-board v-if="isConnected"/>
     </div>
   </template>
 
