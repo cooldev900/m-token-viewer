@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center justify-center p-6">
+  <div class="flex flex-col items-center justify-center p-2 sm:p-6">
     <div class="bg-white shadow-lg rounded-lg p-8 w-full">
       <!-- <h2 class="text-xl font-bold text-center text-gray-800 mb-6">Network Switcher</h2> -->
 
@@ -28,7 +28,7 @@
 </template>
 
 <script setup lang="ts">
-import type { INetwork } from "@/lib/type";
+import type { INetwork } from "@/utils/type";
 import { useAppKitNetwork } from "@reown/appkit/vue";
 
 const config = useRuntimeConfig()
@@ -43,7 +43,6 @@ const displayedContractAddress = ref('');
 watch([networkData, networks], ([newNetworkData, newNetworks]) => {
   selectedNetwork.value = newNetworkData.chainId?.toString();
   displayedContractAddress.value = newNetworks.find((network) => network.chainId === networkData.value.chainId?.toString())?.mTokenAddress || "";
-  console.log(displayedContractAddress)
 },
 {
   deep: true,

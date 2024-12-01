@@ -10,5 +10,14 @@ declare module 'vue' {
     LayoutHeader: typeof import('./components/layout/LayoutHeader.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Table: typeof import('./components/ui/table/Table.vue')['default']
+    TableBody: typeof import('./components/ui/table/TableBody.vue')['default']
+    TableCaption: typeof import('./components/ui/table/TableCaption.vue')['default']
+    TableCell: typeof import('./components/ui/table/TableCell.vue')['default']
+    TableEmpty: typeof import('./components/ui/table/TableEmpty.vue')['default']
+    TableFooter: typeof import('./components/ui/table/TableFooter.vue')['default']
+    TableHead: typeof import('./components/ui/table/TableHead.vue')['default']
+    TableHeader: typeof import('./components/ui/table/TableHeader.vue')['default']
+    TableRow: typeof import('./components/ui/table/TableRow.vue')['default']
   }
 }
