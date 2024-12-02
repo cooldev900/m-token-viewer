@@ -21,10 +21,12 @@
   </div>
 </template>
 <script lang="ts" setup>
+import { useAppKitNetwork } from '@reown/appkit/vue';
 import type { IBalanceHistory } from '@/utils/type';
 import { useAccount } from '@wagmi/vue';
 import { isAddress } from 'viem';
 
+const networkData = useAppKitNetwork();
 const { isConnected, address } = useAccount();
 const addressValue = ref(isConnected.value ? address.value : undefined);
 const addressError = ref('');
@@ -52,5 +54,7 @@ const setBalanceData = async () => {
 
 onMounted(async () => {
   await setBalanceData();
-})
+});
+
+watch(networkData, () => setBalanceData(), {immediate: true, deep: true});
 </script>

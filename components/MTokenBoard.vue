@@ -11,7 +11,9 @@
 
 <script lang="ts" setup>
 import type { IHolder } from '@/utils/type';
-const { data, isLoading, error } = useSubgraph();
+import { useAppKitNetwork } from '@reown/appkit/vue';
+const networkData = useAppKitNetwork();
+const { data, isLoading, error, refetch } = useSubgraph();
 const holders = ref<IHolder[]>([]);
 const volume = ref<string>('');
 
@@ -22,4 +24,6 @@ watch(data, (newData) => {
   deep: true,
   immediate: true,
 });
+
+watch(networkData, () => refetch(), {immediate: true, deep: true});
 </script>
