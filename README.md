@@ -4,6 +4,10 @@ Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduct
 
 ## Setup
 
+```bash
+# .env
+VITE_APP_PROJECT_ID= // Web3Modal Project Id
+```
 Make sure to install dependencies:
 
 ```bash
