@@ -2,7 +2,7 @@ const createGraphqlQuery = (address: string) => `query GetBalanceHistory {
   holder(id: "${address}") {
     id
     balance
-    balanceChanges {
+    balanceChanges(orderBy:timestamp) {
       timestamp
       id
       balance

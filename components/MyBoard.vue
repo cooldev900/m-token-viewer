@@ -13,7 +13,7 @@
         </div>
         <div class="grid w-full max-w-sm items-center gap-1.5 mb-2">
           <Label for="picture">MToken Balance</Label>
-          <Input id="address" type="text" :value="balance" disabled class="text-white" />
+          <Input id="address" type="text" :value="balance?.formatted" disabled class="text-white" />
         </div>
       </div>
     </div>
@@ -26,11 +26,10 @@ import { useAccount } from '@wagmi/vue';
 import { isAddress } from 'viem';
 
 const { isConnected, address } = useAccount();
-const balance = useMTokenBalance(address.value)
-const addressValue = ref(isConnected.value ? address.value : '');
+const addressValue = ref(isConnected.value ? address.value : undefined);
 const addressError = ref('');
 const balanceData = ref<IBalanceHistory[]>([]);
-// const balance = ref('');
+const balance = useMTokenBalance(addressValue);
 
 const setBalanceData = async () => {
   if (!addressValue.value) {

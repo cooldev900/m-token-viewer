@@ -19,8 +19,8 @@ export default defineNuxtConfig({
         {
           chainId: '11155111',
           name: "Sepolia",
-          mTokenAddress: "0x866a2bf4e572cbcf37d5071a7a58503bfb36be1b",
-          apiUrl: 'https://subgraph.satsuma-prod.com/be297ae35dd7/jeremys-team--377934/m-token-subgraph/version/v0.0.1-new-version/api',
+          mTokenAddress: "0x94a9D9AC8a22534E3FaCa9F4e7F2E2cf85d5E4C8",
+          apiUrl: 'https://subgraph.satsuma-prod.com/jeremys-team--377934/m-token-subgraph-sepolia/version/v0.0.1-new-version/api',
         },
       ]
     },
