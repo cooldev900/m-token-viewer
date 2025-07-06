@@ -7,8 +7,8 @@ M-Token Viewer is a web application designed to showcase information about the M
    - Set up the project using **Viem**, **Wagmi**, and **Reowned Kit** for seamless wallet connections and blockchain interactions.
 
 2. **Subgraph Deployment**:
-   - **Mainnet Subgraph**: [Mainnet Playground](https://subgraph.satsuma-prod.com/jeremys-team--377934/m-token-subgraph/playground)
-   - **Sepolia Subgraph**: [Sepolia Playground](https://subgraph.satsuma-prod.com/jeremys-team--377934/m-token-subgraph-sepolia/playground)
+   - **Mainnet Subgraph**: [Mainnet Playground](https://subgraph.satsuma-prod.com/cooldev900--377934/m-token-subgraph/playground)
+   - **Sepolia Subgraph**: [Sepolia Playground](https://subgraph.satsuma-prod.com/cooldev900--377934/m-token-subgraph-sepolia/playground)
    - Fetch token data such as holders, balances, volume, and balance history.
 
 3. **Data Display**:
@@ -37,8 +37,8 @@ M-Token Viewer is a web application designed to showcase information about the M
    Create a `.env` file in the root of your project and add the following:
    ```env
    VITE_APP_PROJECT_ID=your-project-id
-   VITE_APP_SUBGRAPH_MAINNET=https://subgraph.satsuma-prod.com/jeremys-team--377934/m-token-subgraph/playground
-   VITE_APP_SUBGRAPH_SEPOLIA=https://subgraph.satsuma-prod.com/jeremys-team--377934/m-token-subgraph-sepolia/playground
+   VITE_APP_SUBGRAPH_MAINNET=
+   VITE_APP_SUBGRAPH_SEPOLIA=
    ```
 
 4. Start the development server:
